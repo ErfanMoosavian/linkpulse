@@ -11,6 +11,18 @@ module LinksHelper
     I18n.locale == :fa ? "rtl" : "ltr"
   end
 
+  def formatted_created_at(record)
+    return "" unless record.respond_to?(:created_at) && record.created_at
+
+    record.created_at.strftime("%Y-%m-%d %H:%M")
+  end
+
+  def link_status_label(link)
+    return t("links.expired", default: "Expired") if link.respond_to?(:expired?) && link.expired?
+
+    t("links.active", default: "Active")
+  end
+
   def top_referrers_summary(link, limit: 5)
     return [] unless link.respond_to?(:click_events)
 
@@ -20,5 +32,10 @@ module LinksHelper
         .transform_keys { |ref| ref.presence || "Direct" }
         .sort_by { |_k, v| -v }
         .first(limit)
+  end
+
+  def daily_clicks_rows(link)
+    report = LinkAnalyticsReport.new(link)
+    report.clicks_by_day.sort_by { |date, _count| date }.reverse
   end
 end

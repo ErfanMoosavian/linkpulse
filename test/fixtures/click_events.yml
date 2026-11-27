@@ -1,0 +1,4 @@
+one:
+  link: one
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/125.0.0.0"
+  referer: "https://google.com"

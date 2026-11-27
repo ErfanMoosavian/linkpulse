@@ -1,0 +1,66 @@
+fa:
+  app:
+    name: "LinkPulse"
+    tagline: "کوتاه‌کننده لینک و تحلیل آمار کلیک"
+    badge: "ریلز"
+  actions:
+    shorten: "کوتاه کردن لینک"
+    copy: "کپی"
+    copied: "کپی شد!"
+    analytics: "آمار"
+    delete: "حذف"
+    back_to_dashboard: "→ بازگشت به داشبورد"
+  links:
+    create_title: "ساخت لینک کوتاه جدید"
+    original_url_label: "آدرس اینترنتی مقصد (URL)"
+    original_url_placeholder: "https://github.com/username/repository"
+    short_code_label: "نام کوتاه دلخواه (اختیاری، ۴ تا ۱۵ کاراکتر انگلیسی)"
+    short_code_placeholder: "my-portfolio"
+    your_links: "لینک‌های شما"
+    total_clicks: "مجموع کلیک‌ها"
+    empty_state: "هنوز لینکی نساخته‌اید. یک آدرس در کادر بالا وارد کنید تا اولین لینک کوتاه شما ساخته شود."
+    confirm_delete: "آیا از حذف این لینک مطمئن هستید؟"
+    table:
+      short_link: "لینک کوتاه"
+      destination: "لینک مقصد"
+      clicks: "کلیک‌ها"
+      actions: "عملیات"
+    notices:
+      created: "لینک کوتاه با موفقیت ساخته شد: %{url}"
+      deleted: "لینک با موفقیت حذف شد."
+      not_found: "لینک کوتاه مورد نظر پیدا نشد."
+  analytics:
+    short_url: "آدرس کوتاه"
+    destination: "مقصد"
+    total_clicks: "کل کلیک‌ها"
+    browsers: "مرورگرها"
+    devices: "دستگاه‌ها"
+    no_data: "هنوز داده‌ای ثبت نشده است"
+    recent_clicks: "تاریخچه کلیک‌های اخیر (۵۰ مورد آخر)"
+    no_clicks: "هنوز کلیکی ثبت نشده است. لینک کوتاه را باز کنید تا ثبت آمار را تست کنید!"
+    direct: "مستقیم"
+    time_utc: "زمان (UTC)"
+    browser: "مرورگر"
+    device: "دستگاه"
+    referer: "ارجاع‌دهنده"
+    device_types:
+      Desktop: "دسکتاپ"
+      Mobile: "موبایل"
+      Tablet: "تبلت"
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: "نمی‌تواند خالی باشد"
+      taken: "قبلاً ثبت شده است"
+      too_short: "کوتاه‌تر از حد مجاز است (حداقل %{count} کاراکتر)"
+      too_long: "بلندتر از حد مجاز است (حداکثر %{count} کاراکتر)"
+  activerecord:
+    attributes:
+      link:
+        original_url: "آدرس مقصد"
+        short_code: "کد کوتاه"
+    errors:
+      messages:
+        invalid_url: "باید با http:// یا https:// شروع شود"
+        reserved_code: "رزرو شده است و قابل استفاده نیست"
+        invalid_code_format: "فقط شامل حروف انگلیسی، عدد، خط تیره و آندرلاین باشد"

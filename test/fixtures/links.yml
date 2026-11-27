@@ -1,0 +1,9 @@
+one:
+  original_url: "https://rubyonrails.org"
+  short_code: "rails8"
+  clicks_count: 2
+
+two:
+  original_url: "https://github.com"
+  short_code: "ghhome"
+  clicks_count: 0

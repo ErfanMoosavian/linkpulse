@@ -1,0 +1,59 @@
+en:
+  app:
+    name: "LinkPulse"
+    tagline: "URL Shortener & Click Analytics"
+    badge: "Rails"
+  actions:
+    shorten: "Shorten URL"
+    copy: "Copy"
+    copied: "Copied!"
+    analytics: "Analytics"
+    delete: "Delete"
+    back_to_dashboard: "← Back to Dashboard"
+  links:
+    create_title: "Create a Short Link"
+    original_url_label: "Destination URL"
+    original_url_placeholder: "https://github.com/username/repository"
+    short_code_label: "Custom Alias (optional, 4-15 chars)"
+    short_code_placeholder: "my-portfolio"
+    your_links: "Your Links"
+    total_clicks: "Total Clicks"
+    empty_state: "No links yet. Paste a URL above to create your first short link."
+    confirm_delete: "Are you sure you want to delete this link?"
+    table:
+      short_link: "Short Link"
+      destination: "Destination"
+      clicks: "Clicks"
+      actions: "Actions"
+    notices:
+      created: "Short link created: %{url}"
+      deleted: "Link deleted successfully."
+      not_found: "Short link not found."
+  analytics:
+    short_url: "Short URL"
+    destination: "Destination"
+    total_clicks: "Total Clicks"
+    browsers: "Browsers"
+    devices: "Devices"
+    no_data: "No data yet"
+    recent_clicks: "Recent Click History (Last 50)"
+    no_clicks: "No clicks recorded yet. Open your short link to test tracking!"
+    direct: "Direct"
+    time_utc: "Time (UTC)"
+    browser: "Browser"
+    device: "Device"
+    referer: "Referer"
+    device_types:
+      Desktop: "Desktop"
+      Mobile: "Mobile"
+      Tablet: "Tablet"
+  activerecord:
+    attributes:
+      link:
+        original_url: "Destination URL"
+        short_code: "Custom Alias"
+    errors:
+      messages:
+        invalid_url: "must start with http:// or https://"
+        reserved_code: "is reserved and cannot be used"
+        invalid_code_format: "only allows letters, numbers, dashes, and underscores"
